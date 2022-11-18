@@ -2,7 +2,7 @@ const dotenv = require('dotenv')
 const express = require('express');
 //const fileUpload = require('express-fileupload');
 const server = express();
-//const CORS = require('cors');
+const CORS = require('cors');
 const mongoose = require('mongoose');
 //const authRoute = require('./routes/auth');
 //const userRoute = require('./routes/user');
@@ -18,11 +18,11 @@ mongoose.connect(process.env.MONGO_URL)
         .then(()=>console.log('Bd is connected'))
         .catch((e)=>console.log(e)); 
 
-/*server.use(CORS({
+server.use(CORS({
         origin: '*',
         credentials: true,
     }));
-*/
+
 
 server.use(express.json());
 //server.use(fileUpload());
