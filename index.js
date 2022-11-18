@@ -1,8 +1,7 @@
-//const dotenv = require('dotenv')
+const dotenv = require('dotenv')
 const express = require('express');
 //const fileUpload = require('express-fileupload');
 const server = express();
-//server.set("port",PORT);
 //const CORS = require('cors');
 //const mongoose = require('mongoose');
 //const authRoute = require('./routes/auth');
@@ -14,7 +13,7 @@ const server = express();
 
 const PORT = process.env.PORT || 8080;
 
-//dotenv.config();
+dotenv.config();
 //mongoose.connect(process.env.MONGO_URL)
 //        .then(()=>console.log('Bd is connected'))
 //        .catch((e)=>console.log(e)); 
